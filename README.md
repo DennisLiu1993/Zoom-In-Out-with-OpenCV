@@ -10,8 +10,11 @@ This project can zoom in / out image showed on OpenCV window without other UI fr
 # Usage:
 
 1.Download Visual Studio and Install
+
 2.Set up your OpenCV include directory, library directory, name of .lib
+
 3.Place OpenCV.dll to the output directory of this project (for me, it's Zoom-In-Out-with-OpenCV\\Debug)
+
 4.Run and Experience
 
 or you can just copy OpenCVWindowEx.h, OpenCVWindowEx.cpp to your own project
