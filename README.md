@@ -5,7 +5,7 @@ This project can zoom in / out image showed on OpenCV window without other UI fr
 
 # Visual Effect:
 
-![image](https://github.com/DennisLiu1993/Zoom-In-Out-with-OpenCV/blob/main/ZoomInOut.gif)
+![image](https://github.com/DennisLiu1993/Zoom-In-Out-with-OpenCV/blob/main/ZoomInOutPan.gif)
 
 # Usage:
 
