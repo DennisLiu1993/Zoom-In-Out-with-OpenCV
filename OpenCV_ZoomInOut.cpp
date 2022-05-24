@@ -7,6 +7,7 @@ int main()
 {
     //std::cout << "Hello World!\n";
 	COpenCVWindowExt window ("Src");
+	window.SetInitailScale (0.8);
 	window.ImRead ("test2.bmp");
 	waitKey (0);
 

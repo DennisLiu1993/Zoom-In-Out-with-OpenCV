@@ -9,24 +9,38 @@ public:
 	~COpenCVWindowExt ();
 
 	bool ImRead (String strFileName);
+	void SetInitailScale (double dScale);
+
+
 	void RefreshImage ();
 	Mat m_matSrc;
+	vector<Mat> m_vecMatResize;
 	String m_strWindowName;
+
+	double m_dInitialScale;
+	double m_dNewScale;
+	double m_dScaleRatio;
+	double m_dCompensationX;
+	double m_dCompensationY;
 
 	int m_iScaleTimes;
 	int m_iMaxScaleTimes;
 	int m_iMinScaleTimes;
-	double m_dCompensationX;
-	double m_dCompensationY;
-	double m_dInitialScale;
-	double m_dNewScale;
-	double m_dScaleRatio;
+	
+	int m_iOrgW;
+	int m_iOrgH;
+	
 
-	int m_iMouseX;
-	int m_iMouseY;
+	Point ptLButtonDown;
+	Point ptRButtonDown;
 
+	void SetHorzBarPos (int iPos);
+	void SetVertBarPos (int iPos);
 	int m_iHorzScrollBarPos;
 	int m_iVertScrollBarPos;
+	int m_iHorzScrollBarPos_copy;
+	int m_iVertScrollBarPos_copy;
+
 
 	int m_iHorzScrollBarRange_Min;
 	int m_iHorzScrollBarRange_Max;
