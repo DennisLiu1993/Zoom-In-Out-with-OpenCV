@@ -22,25 +22,17 @@ void MouseCall (int event, int x, int y, int flag, void* pUserData)
 
 		pParent->m_dNewScale = pParent->m_dInitialScale * pow (pParent->m_dScaleRatio, pParent->m_iScaleTimes);
 
-		if (pParent->m_iScaleTimes != 0)
-		{
-			
-			int iW = pParent->m_iOrgW;
-			int iH = pParent->m_iOrgH;
-			pParent->m_iHorzScrollBarRange_Max = int (pParent->m_dNewScale * iW - pParent->m_dInitialScale * iW);
-			pParent->m_iVertScrollBarRange_Max = int (pParent->m_dNewScale * iH - pParent->m_dInitialScale * iH);
-			int iBarPosX = int (dPixelX * pParent->m_dNewScale - x + 0.5);
-			int iBarPosY = int (dPixelY * pParent->m_dNewScale - y + 0.5);
-			pParent->SetHorzBarPos (iBarPosX);
-			pParent->SetVertBarPos (iBarPosY);
-			pParent->m_dCompensationX = -iBarPosX + (dPixelX * pParent->m_dNewScale - x);
-			pParent->m_dCompensationY = -iBarPosY + (dPixelY * pParent->m_dNewScale - y);
-		}
-		else
-		{
-			pParent->m_iHorzScrollBarPos = 0;
-			pParent->m_iVertScrollBarPos = 0;
-		}
+        int iW = pParent->m_iOrgW;
+        int iH = pParent->m_iOrgH;
+        pParent->m_iHorzScrollBarRange_Max = int(pParent->m_dNewScale * iW - pParent->m_dInitialScale * iW);
+        pParent->m_iVertScrollBarRange_Max = int(pParent->m_dNewScale * iH - pParent->m_dInitialScale * iH);
+        int iBarPosX = int(dPixelX * pParent->m_dNewScale - x + 0.5);
+        int iBarPosY = int(dPixelY * pParent->m_dNewScale - y + 0.5);
+        pParent->SetHorzBarPos(iBarPosX);
+        pParent->SetVertBarPos(iBarPosY);
+        pParent->m_dCompensationX = -iBarPosX + (dPixelX * pParent->m_dNewScale - x);
+        pParent->m_dCompensationY = -iBarPosY + (dPixelY * pParent->m_dNewScale - y);
+
 		pParent->RefreshImage ();
 	}
 	else if (event == EVENT_RBUTTONDOWN)
